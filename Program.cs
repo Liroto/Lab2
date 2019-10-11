@@ -8,6 +8,16 @@ namespace ConsoleApp1
 {
     class Program
     {
+        public static double factorial(double x)
+        {
+            double temp = x, fct = 1;
+            for (double i = 1; i < temp; temp--)
+            {
+                fct *= temp;
+            }
+            Console.WriteLine($"factorial = {fct}");
+            return fct;
+        }
         static void Main(string[] args)
         {
             /*int a, b, c;
@@ -65,6 +75,28 @@ namespace ConsoleApp1
                     Console.Write($"{a} ");
                 }
             }*/ //3-я задача
+
+            /*double cosx = 1, counter = 1, x, q;
+            Console.Write("Введите искомый угол(в градусах): ");
+            x = double.Parse(Console.ReadLine());
+           
+            Console.WriteLine($"x = {x}");
+
+            Console.WriteLine("Введите коэффициент точности 0<q<1 в формате 0,qqqqq: ");
+            q = double.Parse(Console.ReadLine());
+            if (q > 1 || q < 0) Console.WriteLine("Нет,так ничего не работает");
+            Console.WriteLine($"q = {q}");
+            
+            int c = 0;
+            for (int i = 2; q < Math.Abs(Math.Pow(x, i) / factorial(i)); i += 2)
+            {
+                Console.WriteLine($"{c}|{cosx}");
+                if (counter % 2 == 1) cosx -= Math.Pow(x, i) / factorial(i);
+                else cosx += Math.Pow(x, i) / factorial(i);
+                counter++;c++;
+            }
+            Console.WriteLine(cosx); //4-я задача*/
+
 
             /*int N;
             Console.Write("Введите число для разложения ");
