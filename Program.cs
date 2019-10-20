@@ -77,7 +77,7 @@ namespace ConsoleApp1
             }*/ //3-я задача
 
             /*double cosx = 1, counter = 1, x, q;
-            Console.Write("Введите искомый угол(в градусах): ");
+            Console.Write("Введите искомый угол(в радианах): ");
             x = double.Parse(Console.ReadLine());
            
             Console.WriteLine($"x = {x}");
