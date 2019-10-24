@@ -20,32 +20,82 @@ namespace ConsoleApp1
         }
         static void Main(string[] args)
         {
-            /*int a, b, c;
-            double discriminant, x1,x2;
+            int selector;
+            Console.Write("Выберите задание(1-8): ");
+            selector = int.Parse(Console.ReadLine());
+            switch (selector)
+            {
+                case 0:
+                    break;
+                case 1:
+                    Console.WriteLine("Первая задача.\n");
+                    first();
+                    break;
+                case 2:
+                    Console.WriteLine("Вторая задача.\n");
+                    second();
+                    break;
+                case 3:
+                    Console.WriteLine("Третья задача.\n");
+                    third();
+                    break;
+                case 4:
+                    Console.WriteLine("Четвёртая задача.\n");
+                    fourth();
+                    break;
+                case 5:
+                    Console.WriteLine("Пятая задача.\n");
+                    fiveth();
+                    break;
+                case 6:
+                    Console.WriteLine("Шестая задача.\n");
+                    sixth();
+                    break;
+                case 7:
+                    Console.WriteLine("Первая индивидуальная задача.\n");
+                    special_first();
+                    break;
+                case 8:
+                    Console.WriteLine("Вторая индивидуальная задача.\n");
+                    special_second();
+                    break;
+                default:
+                    break;
+            }    
+        }
+
+
+        public static void first()
+        {
+            int a, b, c;
+            double discriminant, x1, x2;
             Console.WriteLine("Введите индексы a,b,c для квадратного классического уравнения:");
             a = int.Parse(Console.ReadLine());
             b = int.Parse(Console.ReadLine());
             c = int.Parse(Console.ReadLine());
-            discriminant = b*b - 4*a*c;
+            discriminant = b * b - 4 * a * c;
             if (discriminant < 0)
             {
-            Console.WriteLine("Дискриминант меньше 0,у данного уравнения корней нет.");
+                Console.WriteLine("Дискриминант меньше 0,у данного уравнения корней нет.");
             }
             else if (discriminant == 0)
             {
-            x1 = -b / 2 * a;
-            Console.WriteLine("Дискриминант равен 0,у данного уравнения один корень.");
-            Console.WriteLine($"X = {x1}");
+                x1 = -b / 2 * a;
+                Console.WriteLine("Дискриминант равен 0,у данного уравнения один корень.");
+                Console.WriteLine($"X = {x1}");
             }
-            else {
-            x1 = (-b + Math.Sqrt(discriminant)) / 2 * a;
-            x2 = (-b - Math.Sqrt(discriminant)) / 2 * a;
-            Console.WriteLine("Дискриминант больше 0,у данного уравнения два корня.");
-            Console.WriteLine($"X1 = {x1};\tX2 = {x2}");
-            }*/ //1-я задача
+            else
+            {
+                x1 = (-b + Math.Sqrt(discriminant)) / 2 * a;
+                x2 = (-b - Math.Sqrt(discriminant)) / 2 * a;
+                Console.WriteLine("Дискриминант больше 0,у данного уравнения два корня.");
+                Console.WriteLine($"X1 = {x1};\tX2 = {x2}");
+            } //1-я задача 
+        }
 
-
-            /*//π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9...
+        public static void second()
+        {
+            //π/4 = 1 - 1/3 + 1/5 - 1/7 + 1/9...
             double divided_pi = 0; int denominator = 1;
             double counter;
             counter = int.Parse(Console.ReadLine());
@@ -60,11 +110,15 @@ namespace ConsoleApp1
                 denominator += 2;
             }
             double pi = (double)divided_pi * 4;
-            Console.WriteLine(pi);*/ //2 - я задача
+            Console.WriteLine(pi); //2 - я задача
+        }
+
+        public static void third()
+        {
 
             //1,1,2,3,5,8,13,21
 
-            /*int a = 0;
+            int a = 0,counter = 0;
             int b = 1;
             for (; a < 10000; )
             {
@@ -72,11 +126,16 @@ namespace ConsoleApp1
                 a = b;
                 b = temp + b;
                 if (a > 999 && a < 10000) {
+                    counter++;
                     Console.Write($"{a} ");
                 }
-            }*/ //3-я задача
+            } //3-я задача
+            Console.WriteLine($"\nВсего {counter} 4-х занчных числа в ряде Фибоначчи");
+        }
 
-            /*double cosx = 1, counter = 1, x, q;
+        public static void fourth()
+        {
+            double cosx = 1, counter = 1, x, q;
             Console.Write("Введите искомый угол(в радианах): ");
             x = double.Parse(Console.ReadLine());
            
@@ -95,10 +154,12 @@ namespace ConsoleApp1
                 else cosx += Math.Pow(x, i) / factorial(i);
                 counter++;c++;
             }
-            Console.WriteLine(cosx); //4-я задача*/
+            Console.WriteLine(cosx); //4-я задача
+        }
 
-
-            /*int N;
+        public static void fiveth()
+        {
+            int N;
             Console.Write("Введите число для разложения ");
             N = int.Parse(Console.ReadLine());
 
@@ -121,9 +182,11 @@ namespace ConsoleApp1
                         }
                     }
                 }
-            }5-я задача*/
-
-            /*Console.Write("Введите возраст от 1 до 100 ");
+            }//5-я задача
+        }
+        public static void sixth()
+        {
+            Console.Write("Введите возраст от 1 до 100 ");
             int age = int.Parse(Console.ReadLine());
             if (age < 0 || age > 100)
             {
@@ -141,9 +204,12 @@ namespace ConsoleApp1
                 else {
                     Console.Write($"{age} лет ");
                 }
-            } 6-я задача*/
+            } //6-я задача
+        }
 
-            /*double a, b, c;
+        public static void special_first()
+        {
+            double a, b, c;
             Console.Write("введите стороны треугольника: ");
             a = double.Parse(Console.ReadLine());
             b = double.Parse(Console.ReadLine());
@@ -158,14 +224,19 @@ namespace ConsoleApp1
             }
             else {
                 Console.WriteLine("False");
-            } 1-я индивидуальная задача*/
+            } //1-я индивидуальная задача
 
 
-            /*for (int i = 100; i < 1000; i++) {
+            
+        }
+
+        public static void special_second()
+        {
+            for (int i = 100; i < 1000; i++) {
                 if (i / 100 == i%10) {
                     Console.WriteLine(i);
                 }
-            } 2-я индивидальная задача*/
+            } //2-я индивидальная задача
         }
     }
 }
